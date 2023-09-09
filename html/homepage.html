@@ -5,132 +5,9 @@
         <title>
             About Me
         </title>
-        <style>
-            * {
-                font-family: Arial;
-                /* font-size: 14px; */
-                margin: 0;
-                padding: 0;
-                border: none;
-            }
-            body {
-                width: 1000px;
-                margin: 0 auto; /* 水平居中 */
-            }
-            .language {
-                width: 100%;
-                height: 30px;
-                display: flex;
-                justify-content: flex-end; /* 内容靠右 */
-                align-items: center; /* 侧轴居中 */
-                list-style: none; /* 无前面的点 */
-            }
-            .language li a {
-                color: rgb(88, 88, 88);
-                margin-right: 20px;
-                text-decoration: none; /* 无下划线 */
-                font-size: 14px;
-            }
-            .navi {
-                width: 100%;
-                height: 100px;
-                display: flex;
-                border-bottom: 1px solid rgb(176, 176, 176); /* 添加一条下划线 */
-            }
-            .navi div {
-                width: 25%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .navi ul {
-                width: 75%;
-                display: flex;
-            }
-            .navi ul li {
-                width: 25%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .navi ul li a {
-                font-size: 20px;
-                color: rgb(88, 88, 88);
-                text-decoration: none; /* 无下划线 */
-            }
-            .contents {
-                width: 100%;
-                display: flex;
-            }
-            .contents-me {
-                width: 25%;
-                display: flex;
-                flex-direction: column; /* 里面元素全部竖着排 */
-                align-content: flex-start; /* 靠紧上一行 */
-            }
-            .me-photo {
-                width: 150px;
-                height: 210px;
-                margin-top: 20px;
-                margin-left: 20px;
-            }
-            .me-photo img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 75px/105px;
-            }
-            .me-name {
-                margin-top: 20px;
-                margin-left: 20px;
-                font-size: 20px;
-                color: rgb(88, 88, 88);
-            }
-            .me-intro {
-                margin-top: 20px;
-                margin-left: 20px;
-                margin-right: 20px;
-                color: rgb(88, 88, 88);
-            }
-            .me-extra {
-                margin-top: 20px;
-                margin-left: 20px;
-                margin-right: 20px;
-                display: flex;
-                align-items: center;
-            }
-            .me-extra div {
-                width: 20px;
-                height: 16px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .me-extra div img{
-                max-height: 100%;
-                max-width: 100%;
-            }
-            .me-extra p {
-                margin-left: 6px;
-                color: rgb(88, 88, 88);
-            }
-            .me-extra a {
-                margin-left: 6px;
-                color: rgb(88, 88, 88);
-                text-decoration: none; /* 无下划线 */
-            }
-            .contents-main {
-                width: 75%;
-                display: flex;
-            }
-            #main-article {
-                margin-top: 20px;
-                margin-left: 20px;
-                margin-right: 20px;
-            }
-            .bottom {
-                height: 20px;
-            }
-        </style>
+        <link rel="stylesheet" href="../css/homepage.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script type="text/javascript" src="../js/homepage.js"></script>
     </head>
     <body>
         <ul class="language">
@@ -144,10 +21,10 @@
                 <img src="../src/logo.png" alt="logo">
             </div>
             <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Publications</a></li>
-                <li><a href="#">Talks</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="javascript:managemd('../md/aboutme-en.md')">About Me</a></li>
+                <li><a href="javascript:managemd('../md/publications-en.md')">Publications</a></li>
+                <li><a href="javascript:managemd('../md/talks-en.md')">Talks</a></li>
+                <li><a href="javascript:managemd('../md/projects-en.md')">Projects</a></li>
             </ul>
         </div>
         <div class="contents">
@@ -178,20 +55,8 @@
             </div>
             <div class="contents-main">
                 <div id="main-article"></div>
-                <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-                <script>
-                    let xhr = new XMLHttpRequest(); // 创建一个 XMLHttpRequest 对象
-                    xhr.open('GET', '../md/homepage.md', true);  // 指定读取 txt 文件的地址以及请求方式
-                    xhr.responseType = 'text';  // 设置响应类型
-                    // 监听 XMLHttpRequest 对象的 onload 事件
-                    xhr.onload = function() {
-                        if (xhr.status === 200) { // 确认响应状态为成功
-                            document.getElementById('main-article').innerHTML = marked.parse(xhr.responseText);
-                        } else {
-                            document.getElementById('main-article').innerHTML = "Page lost. Please mail to the author. Thank you! "
-                        }
-                    };
-                    xhr.send(); // 发送请求
+                <script type="text/javascript">
+                    managemd('../md/aboutme-en.md');
                 </script>
             </div>
         </div>

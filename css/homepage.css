@@ -1,0 +1,124 @@
+* {
+    font-family: Arial;
+    /* font-size: 14px; */
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body {
+    width: 1000px;
+    margin: 0 auto; /* 水平居中 */
+}
+.language {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end; /* 内容靠右 */
+    align-items: center; /* 侧轴居中 */
+    list-style: none; /* 无前面的点 */
+}
+.language li a {
+    color: rgb(88, 88, 88);
+    margin-right: 20px;
+    text-decoration: none; /* 无下划线 */
+    font-size: 14px;
+}
+.navi {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-bottom: 1px solid rgb(176, 176, 176); /* 添加一条下划线 */
+}
+.navi div {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navi ul {
+    width: 75%;
+    display: flex;
+}
+.navi ul li {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navi ul li a {
+    font-size: 20px;
+    color: rgb(88, 88, 88);
+    text-decoration: none; /* 无下划线 */
+}
+.contents {
+    width: 100%;
+    display: flex;
+}
+.contents-me {
+    width: 25%;
+    display: flex;
+    flex-direction: column; /* 里面元素全部竖着排 */
+    align-content: flex-start; /* 靠紧上一行 */
+}
+.me-photo {
+    width: 150px;
+    height: 210px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.me-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 75px/105px;
+}
+.me-name {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: rgb(88, 88, 88);
+}
+.me-intro {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgb(88, 88, 88);
+}
+.me-extra {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.me-extra div {
+    width: 20px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.me-extra div img{
+    max-height: 100%;
+    max-width: 100%;
+}
+.me-extra p {
+    margin-left: 6px;
+    color: rgb(88, 88, 88);
+}
+.me-extra a {
+    margin-left: 6px;
+    color: rgb(88, 88, 88);
+    text-decoration: none; /* 无下划线 */
+}
+.contents-main {
+    width: 75%;
+    display: flex;
+}
+#main-article {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.bottom {
+    height: 20px;
+}
