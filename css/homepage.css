@@ -35,6 +35,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.navi div img {
+    width: 60%;
+}
 .navi ul {
     width: 75%;
     display: flex;
@@ -92,7 +95,7 @@ body {
 }
 .me-extra div {
     width: 20px;
-    height: 16px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
