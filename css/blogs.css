@@ -1,0 +1,50 @@
+* {
+    font-family: Arial;
+    /* font-size: 14px; */
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body {
+    width: 1000px;
+    margin: 0 auto; /* 水平居中 */
+}
+.language {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end; /* 内容靠右 */
+    align-items: center; /* 侧轴居中 */
+    list-style: none; /* 无前面的点 */
+}
+.language li a {
+    color: rgb(88, 88, 88);
+    margin-right: 20px;
+    text-decoration: none; /* 无下划线 */
+    font-size: 14px;
+}
+.contents {
+    width: 100%;
+    display: flex;
+}
+.contents-catalogs {
+    width: 25%;
+    display: flex;
+}
+#catalogs {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.contents-articles {
+    width: 75%;
+    display: flex;
+}
+#articles {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.bottom {
+    height: 20px;
+}

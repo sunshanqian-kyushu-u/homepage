@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Blogs
+        </title>
+        <link rel="stylesheet" href="../css/blogs.css">
+        <link rel="icon" type="image/x-ico" href="../src/commons/minilogo.png"/>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script type="text/javascript" src="../js/blogs.js"></script>
+    </head>
+    <body>
+        <ul class="language">
+            <li><a href="#">English</a></li>
+            <li><a href="#">日本語</a></li>
+            <li><a href="#">中文</a></li>
+            <li><a href="#">한국어</a></li>
+        </ul>
+        <div class="contents">
+            <div class="contents-catalogs">
+                <div id="catalogs"></div>
+                <script type="text/javascript">
+                    manage_blogs_catalogs('../md/blogs/catalogs-en.md');
+                </script>
+            </div>
+            <div class="contents-articles">
+                <div id="articles"></div>
+                <script type="text/javascript">
+                    manage_blogs_articles('../md/blogs/test-en.md');
+                </script>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </body>
+</html>

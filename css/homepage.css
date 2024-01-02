@@ -43,7 +43,7 @@ body {
     display: flex;
 }
 .navi ul li {
-    width: 25%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
